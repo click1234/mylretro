@@ -1,0 +1,208 @@
+<plugin>
+
+
+<pluginversion>0.3</pluginversion>
+
+
+
+<pluginname>RetroMyL</pluginname>
+
+<deckzone>
+
+	<label>Mazo</label>
+
+	<shuffle>yes</shuffle>
+
+	<gamezonetoloadto>Mazo</gamezonetoloadto>
+
+</deckzone>
+
+
+
+<deckzone>
+
+	<label>OroInicial</label>
+
+	<zonetoloadto>4</zonetoloadto>
+</deckzone>
+
+
+
+<gamezone>
+
+	<label>Mano</label>
+
+	<visibletoowner>yes</visibletoowner>
+
+	<visibletoothers>no</visibletoothers>
+
+</gamezone>
+
+<gamezone>
+
+	<label>Mazo</label>
+
+	<visibletoowner>no</visibletoowner>
+
+	<visibletoothers>no</visibletoothers>
+
+</gamezone>
+
+<gamezone>
+
+	<label>Cementerio</label>
+
+	<visibletoowner>yes</visibletoowner>
+
+	<visibletoothers>yes</visibletoothers>
+</gamezone>
+
+<gamezone>
+
+	<label>Destierro</label>
+	<visibletoowner>yes</visibletoowner>
+
+	<visibletoothers>yes</visibletoothers>
+
+</gamezone>
+
+
+<gamezone>
+
+	<label>Remocion</label>
+	<visibletoowner>yes</visibletoowner>
+
+	<visibletoothers>yes</visibletoothers>
+
+</gamezone>
+
+
+
+<gamezone>
+	<label>OroInicial</label>
+
+	<visibletoowner>yes</visibletoowner>
+
+	<visibletoothers>yes</visibletoothers>
+
+</gamezone>
+
+
+
+<phase><label>Agrupacion</label></phase>
+<phase><label>Vigilia</label></phase>
+<phase><label>Ataque</label></phase>
+<phase><label>Bloqueo</label></phase>
+<phase><label>Talismanes</label></phase>
+<phase><label>Dano</label></phase>
+<phase><label>Fasefinal</label></phase>
+<phase><label>Robo</label></phase>
+<phase><label>Descarte</label></phase>
+<phase><label>CambioJ</label></phase>
+
+
+
+<generalfunction><label>Robar</label><kind>DRAWCARD</kind>
+<includeasbutton>yes</includeasbutton></generalfunction>
+
+
+<generalfunction><label>FaseAnterior</label>
+<kind>PREVIOUSPHASE</kind>
+<includeasbutton>no</includeasbutton></generalfunction>
+
+
+<generalfunction><label>SiguFase</label>
+<kind>NEXTPHASE</kind><includeasbutton>no</includeasbutton></generalfunction>
+
+
+
+<generalfunction><label>Spawn Card</label><kind>SPAWNCARD</kind>
+<includeasbutton>no</includeasbutton></generalfunction>
+
+
+<generalfunction><label>SiguTurno</label><kind>NEXTTURN</kind>
+<includeasbutton>no</includeasbutton></generalfunction>
+
+
+<generalfunction><label>TurnoAnterior</label>
+<kind>PEREVIOUSTURN</kind><includeasbutton>no</includeasbutton></generalfunction>
+
+
+<generalfunction><label>Moneda</label>
+<kind>FLIPCOIN</kind><includeasbutton>no</includeasbutton></generalfunction>
+
+
+
+<generalfunction><label>Botar</label><kind>TRANSFERCARD</kind>
+<sourcegamezone>Mazo</sourcegamezone>
+<destinationgamezone>Cementerio</destinationgamezone>
+<includeasbutton>yes</includeasbutton></generalfunction>
+
+
+
+
+<generalfunction><label>Desterrar</label><kind>TRANSFERCARD</kind>
+<sourcegamezone>Mazo</sourcegamezone>
+<destinationgamezone>Destierro</destinationgamezone>
+<includeasbutton>yes</includeasbutton></generalfunction>
+
+
+
+
+<generalfunction><label>Remover</label><kind>TRANSFERCARD</kind>
+<sourcegamezone>Mazo</sourcegamezone>
+<destinationgamezone>Remocion</destinationgamezone>
+<includeasbutton>yes</includeasbutton></generalfunction>
+
+
+
+<generalfunction><label>Botar a Campo</label><kind>DRAWCARDTOTABLE</kind>
+<includeasbutton>yes</includeasbutton></generalfunction>
+
+
+
+
+
+
+<generalfunction>
+<label>Mill</label><kind>TRANSFERCARD</kind>
+<includeasbutton>yes</includeasbutton>
+	
+<sourceowner>performer</sourceowner>
+<sourcezone>Library</sourcezone>
+<sourceposition>top</sourceposition>
+
+<destinationowner>performer</destinationowner>
+<destinationgamezone>Graveyard</destinationgamezone>
+<destinationposition>top</destinationposition>
+</generalfunction>
+
+
+
+
+
+<cardfunction><label>TomaElControl</label><kind>CHANGEOWNER</kind>
+<includeasbutton>yes</includeasbutton></cardfunction>
+
+
+<cardfunction><label>Flotar</label><kind>HOVER</kind><includeasbutton>yes</includeasbutton></cardfunction>
+
+<cardfunction><label>EliminarEfectos</label><kind>CLEARCARD</kind>
+<includeasbutton>yes</includeasbutton></cardfunction>
+
+
+
+
+<generalfunction><label>Dado</label>
+<kind>ROLLD20</kind><includeasbutton>yes</includeasbutton></generalfunction>
+
+
+<definition><kind>ISYOURFACEDOWNVISIBLE</kind></definition>
+
+
+<definition><kind>ISALLOWINGMULTIPLECARDBACKS</kind></definition>
+
+
+<definition><kind>BACKVISIBILITY</kind><value>BACKVISIBILITYHIDEBACKINZONES</value></definition>
+
+</plugin>   
